@@ -31,7 +31,7 @@
                     <p class="card-front__name">Jane Appleseed</p>
                     <p class="cart-front__expiry">00/00</p>
                 </div>
-                <div class="card-back">
+                <div class="card-back card">
                     <p class="card-back__cvc">000</p>
                 </div>
             </section>
@@ -57,16 +57,19 @@
                         <input id="card-year" placeholder="YY" />
                     </fieldset>
 
-                    <label for="card-cvc">CVC</label>
-                    <input placeholder="e.g. 123" />
+                    <label class="card-form__cvc" for="card-cvc">CVC</label>
+                    <input class="card-form__cvc" placeholder="e.g. 123" />
 
-                    <button id="confirm-button" class="button-primary">
+                    <button
+                        id="confirm-button"
+                        class="button-primary button-primary--form"
+                    >
                         Confirm
                     </button>
                 </form>
             </section>
 
-            <section class="complete-display">
+            <section class="complete-display" hidden>
                 <h1>Thank you!</h1>
                 <p>We've added your card details Continue</p>
                 <button id="continue-button" class="button-primary">
