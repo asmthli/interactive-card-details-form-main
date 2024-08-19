@@ -32,7 +32,7 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
 }
 
 .button-primary {
@@ -47,20 +47,47 @@ main {
     font-family: inherit;
 }
 
+/* Card Container Styles */
+
+.card-container {
+    --_max-width: 35rem;
+    display: grid;
+    grid-template-rows: min(12rem, 30vw) auto auto;
+    grid-template-columns: 10% 1fr 10%;
+
+    padding-inline: max(2vw, calc((100vw - var(--_max-width)) / 2));
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+
+    background-image: url("images/bg-main-mobile.png");
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+}
+
 /* Card Styles */
 
 .card {
-    width: 22rem;
-    height: 12rem;
+    width: 100%;
+    /* Based on intrinsic size of background img */
+    aspect-ratio: 1.82;
 
-    background-size: 100%;
+    color: var(--White);
+    background-size: 100% 100%;
 }
 
 .card-front {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+
+    z-index: 100;
+
     background-image: url(/images/bg-card-front.png);
 }
 
 .card-back {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+
     background-image: url(/images/bg-card-back.png);
 }
 
@@ -90,6 +117,7 @@ input {
 
 input::placeholder {
     opacity: 60%;
+    padding-inline: 0.5rem;
 }
 
 .button-primary--form {
