@@ -220,7 +220,22 @@ form > * {
     color: red;
 }
 
-.error.active {
+.complete-display.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.complete-display.visible > h1 {
+    color: var(--Very-dark-violet);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+}
+
+.complete-display.visible > p {
+    margin-bottom: 2rem;
+    color: var(--Dark-grayish-violet);
 }
 
 /* Footer Styles */
