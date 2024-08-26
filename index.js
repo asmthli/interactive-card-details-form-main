@@ -1,3 +1,32 @@
+function showError(errorElement, message) {
+    errorElement.innerText = message;
+
+    errorElement.className = "error active";
+}
+
+function showCompleteDisplay(formSubmitEvent) {
+    const completeDisplay = document.getElementById("complete-display");
+    const formDisplay = document.getElementById("form-display");
+
+    formSubmitEvent.preventDefault();
+    completeDisplay.removeAttribute("hidden");
+    formDisplay.setAttribute("hidden", "");
+}
+
+function resetToFormDisplay() {
+    location.reload();
+}
+
+const confirmButton = document.getElementById("confirm-button");
+confirmButton.addEventListener("click", (event) => {
+    showCompleteDisplay(event);
+});
+
+const continueButton = document.getElementById("continue-button");
+continueButton.addEventListener("click", (event) => {
+    resetToFormDisplay();
+});
+
 const nameDisplay = document.getElementById("display-name");
 const nameInput = document.getElementById("card-name");
 const nameError = nameInput.parentElement.querySelector(".error");
@@ -100,9 +129,3 @@ cvcInput.addEventListener("input", (event) => {
         }
     }
 });
-
-function showError(errorElement, message) {
-    errorElement.innerText = message;
-
-    errorElement.className = "error active";
-}
