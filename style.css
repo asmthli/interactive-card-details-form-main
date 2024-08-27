@@ -89,7 +89,7 @@ main {
     z-index: 100;
 
     letter-spacing: 0.2ch;
-    background-image: url(/images/bg-card-front.png);
+    background-image: url(images/bg-card-front.png);
 }
 
 .card-front > * {
@@ -126,7 +126,7 @@ main {
     align-items: center;
     justify-items: center;
 
-    background-image: url(/images/bg-card-back.png);
+    background-image: url(images/bg-card-back.png);
 }
 
 .card-back__cvc {
