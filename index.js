@@ -11,6 +11,7 @@ function showCompleteDisplay(formSubmitEvent) {
     formSubmitEvent.preventDefault();
     completeDisplay.removeAttribute("hidden");
     completeDisplay.classList.add("visible");
+    formDisplay.className = "";
     formDisplay.setAttribute("hidden", "");
 }
 
